@@ -1,9 +1,6 @@
-
-
-
 class BankAccount:
-    def __init__(self , id , owner_name , balance):
-        self.__id = id
+    def __init__(self , id_name , owner_name , balance):
+        self.__id = id_name
         self.__owner_name = owner_name
         self.__balance = balance
 
@@ -35,10 +32,10 @@ class Bank:
     def __init__(self):
         self.accounts = []
 
-    def getAccounts(self):
+    def get_accounts(self):
         return self.accounts
     
-    def add_account(self,account):
+    def add_account(self, account):
         self.accounts.append(account)
 
     def remove_account(self, account_id):
@@ -58,14 +55,14 @@ class Bank:
             account.show_account()
 
 def main():
-    account1 = BankAccount(1, "John Doe", 1000.0)
-    account2 = BankAccount(2, "Jane Doe", 2000.0)
-    account3 = BankAccount(3, "Bob Smith", 1500.0)
+    account1 = account_John_Doe(1, "John Doe", 1000.0)
+    account2 = account_Jane_Doe(2, "Jane Doe", 2000.0)
+    account3 = account_Bob_Smith(3, "Bob Smith", 1500.0)
 
     bank = Bank()
-    bank.add_account(account1)
-    bank.add_account(account2)
-    bank.add_account(account3)
+    bank.add_account(account_John_Doe)
+    bank.add_account(account_Jane_Doe)
+    bank.add_account(account_Bob_Smith)
 
     print()
     print()
