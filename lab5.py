@@ -26,7 +26,7 @@ class BankAccount:
             print("Недостатньо коштів")
 
     def show_account(self):
-        print(f"Account ID:{self.__id}, Owner:{self.__owner_name}, Balance: ${self.__balance}")
+        print(f"Account ID:{self.__id_name}, Owner:{self.__owner_name}, Balance: ${self.__balance}")
 
 class Bank:
     def __init__(self):
